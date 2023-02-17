@@ -1,6 +1,6 @@
 import Square from './Square.jsx';
 
-const Board = ({squares, handleSquareClick, winningSquares}) => {
+const Board = ({ squares, handleSquareClick, winningSquares }) => {
   const renderSquare = position => {
     const isWinningSquare = winningSquares.includes(position);
     return (

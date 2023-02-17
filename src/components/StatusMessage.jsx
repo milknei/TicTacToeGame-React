@@ -12,6 +12,7 @@ const StatusMessage = ({ winner, gamingBoard }) => {
           <span className={winner === 'X' ? 'text-green' : 'text-orange'}>
             {winner}
           </span>
+          !
         </>
       );
     }
@@ -37,7 +38,23 @@ const StatusMessage = ({ winner, gamingBoard }) => {
     }
   };
 
-  return <h2 className="status-message">{renderStatusMessage()}</h2>;
+  return (
+    <h2
+      className="status-message"
+      style={
+        winner
+          ? {
+              fontSize: '1.3rem',
+              marginBottom: '1.8rem',
+              fontWeight: 'bold',
+              letterSpacing: '0.1rem',
+            }
+          : {}
+      }
+    >
+      {renderStatusMessage()}
+    </h2>
+  );
 };
 
 export default StatusMessage;
