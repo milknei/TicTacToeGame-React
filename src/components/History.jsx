@@ -3,13 +3,18 @@ const History = ({ history, moveTo, currentMove }) => {
     <div className="history-wrapper">
       <ul className="history">
         {history.map((_, index) => (
-          <li className={index ===0 ? 'hidden' : ''} key={`${index}`}>
+          <li className={index === 0 ? 'hidden' : ''} key={`${index}`}>
             <button
               type="button"
               className={`btn-move  ${currentMove === index ? 'active' : ''}`}
+              style={{
+                fontSize: currentMove === index ? '0.9rem' : '0.8rem',
+              }}
               onClick={() => moveTo(index)}
             >
-              {index === 0 ? 'Go to start of the game' : `Go to move № ${index}`}
+              {index === currentMove
+                ? `Move № ${index}`
+                : `Go to move № ${index}`}
             </button>
           </li>
         ))}
