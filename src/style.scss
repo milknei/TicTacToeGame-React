@@ -61,8 +61,10 @@ button {
       }
 
       .btn-move {
+        font-size: 0.8rem;
         color: #fff;
         &.active {
+          font-size: 0.9rem;
           font-weight: bold;
           color: $green;
         }
@@ -77,6 +79,13 @@ button {
   font-weight: lighter;
   span {
     font-weight: normal;
+  }
+
+  &.winner {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -133,6 +142,11 @@ button {
   }
 }
 
+.history-title {
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 3rem;
+}
 .bg-balls {
   position: fixed;
   top: 0;

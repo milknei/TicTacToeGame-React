@@ -74,15 +74,7 @@ function App() {
       >
         START NEW GAME
       </button>
-      <h2
-        style={{
-          fontWeight: 'normal',
-          fontSize: '1em',
-          marginTop: '3rem',
-        }}
-      >
-        Current game history:
-      </h2>
+      <h2 className="history-title">Current game history:</h2>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
 
       <div className="bg-balls"></div>

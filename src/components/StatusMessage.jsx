@@ -39,19 +39,7 @@ const StatusMessage = ({ winner, gamingBoard }) => {
   };
 
   return (
-    <h2
-      className="status-message"
-      style={
-        winner
-          ? {
-              fontSize: '1.3rem',
-              marginBottom: '1.8rem',
-              fontWeight: 'bold',
-              letterSpacing: '0.1rem',
-            }
-          : {}
-      }
-    >
+    <h2 className={`status-message ${winner ? 'winner' : ''}`}>
       {renderStatusMessage()}
     </h2>
   );
